@@ -53,4 +53,19 @@ describe('Thermostat', function () {
       expect(thermostat.temperature).toEqual(20)
     });
 
+    it('tells me I have used low usage when lower than 18', function() {
+      thermostat.down(5);
+      expect(thermostat.energyUsage()).toEqual('Low-usage');
+    });
+
+    it('tells me I have used medium usage when equal of higher than 25', function() {
+      thermostat.up(4);
+      expect(thermostat.energyUsage()).toEqual('Medium-usage');
+    });
+
+    it('tells me I have used high usage when higher than 25', function() {
+      thermostat.powerSavingModeOff();
+      thermostat.up(6);
+      expect(thermostat.energyUsage()).toEqual('High-usage');
+    });
 });

@@ -40,5 +40,6 @@ I want to be able to reset the temperature
 As a user
 To be considerate
 I want to know how much energy I use every moment
+(< 18 is low-usage, <= 25 is medium-usage, anything else is high-usage)
 (low-usage will be indicated with green, medium-usage indicated with black, high-usage indicated with red)
 ```
