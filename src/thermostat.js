@@ -1,35 +1,40 @@
 'use strict';
 
 class Thermostat {
-    constructor(degrees = 20) {
-        this.degrees = degrees
-        this.psm = true
+    constructor(temperature = 20) {
+      this.temperature = temperature;
+      this.psm = true;
+      this.MAXIMUM_TEMP = 25;
+      this.MINIMUM_TEMP = 10;
     }
+
     up(number) {
-        if ((this.degrees + number > 25) && this.psm === true) {
-            throw new Error('Save the planet, max temp of 25');
-        }
-        if ((this.degrees + number) > 32 && this.psm === false) {
-            throw new Error('Max temp is 32');
-        }
-        this.degrees += number;
+      if((this.temperature + number) > this.MAXIMUM_TEMP) {
+        throw new Error(`Save the planet, max temp of ${this.MAXIMUM_TEMP}`);
+
+      }
+      this.temperature += number;
     }
 
     down(number) {
-        if ((this.degrees - number) < 10) {
-            throw new Error('This is too low bro!')
-        }
-        this.degrees -= number;
+      if((this.temperature - number) < this.MINIMUM_TEMP) {
+        throw new Error('This is too low bro!')
+
+      }
+      this.temperature -= number;
     }
 
     powerSavingMode() {
-        return this.psm;
+      return this.psm;
     }
 
     powerSavingModeOn() {
-        this.psm = true;
+      this.psm = true;
+      this.MAXIMUM_TEMP = 25;
     }
+
     powerSavingModeOff() {
-        this.psm = false;
+      this.psm = false;
+      this.MAXIMUM_TEMP = 32;
     }
 }

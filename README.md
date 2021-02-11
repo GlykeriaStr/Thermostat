@@ -26,12 +26,19 @@ As a user
 Because I love my planet
 I want to turn power saving mode on and have 25 degrees as the maximum
 ```
+```
 As a user
 Because I hate my planet
 I want to turn power saving mode off and have 32 degrees as the maximum
 ```
-
-Power saving mode is on by default but it can also be turned off
-You can reset the temperature to 20 with a reset function
-You can ask about the thermostat's current energy usage: < 18 is low-usage, <= 25 is medium-usage, anything else is high-usage.
-(In the challenges where we add an interface, low-usage will be indicated with green, medium-usage indicated with black, high-usage indicated with red.)
+```
+As a user
+To do stuff quickly
+I want to be able to reset the temperature
+```
+```
+As a user
+To be considerate
+I want to know how much energy I use every moment
+(low-usage will be indicated with green, medium-usage indicated with black, high-usage indicated with red)
+```
