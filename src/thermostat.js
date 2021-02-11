@@ -24,6 +24,10 @@ class Thermostat {
       this.temperature -= number;
     }
 
+    reset() {
+      this.temperature = 20;
+    }
+
     powerSavingMode() {
       return this.psm;
     }
