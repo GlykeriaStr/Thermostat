@@ -8,15 +8,15 @@ describe('Thermostat', function () {
     });
 
     it('defaults at 20 degrees', function () {
-        expect(thermostat.temperature).toEqual(20);
+        expect(thermostat.temp()).toEqual(20);
     });
     it('increases the temperature', function () {
         thermostat.up(4);
-        expect(thermostat.temperature).toEqual(24);
+        expect(thermostat.temp()).toEqual(24);
     });
     it('decreases the temperature', function () {
         thermostat.down(2);
-        expect(thermostat.temperature).toEqual(18);
+        expect(thermostat.temp()).toEqual(18);
     });
 
     it('error message if the temperature < 10 degrees', function () {
@@ -50,7 +50,7 @@ describe('Thermostat', function () {
     it('resets the temperature to 20', function () {
       thermostat.up(5);
       thermostat.reset();
-      expect(thermostat.temperature).toEqual(20)
+      expect(thermostat.temp()).toEqual(20)
     });
 
     it('tells me I have used low usage when lower than 18', function() {

@@ -16,6 +16,10 @@ class Thermostat {
       this.temperature += number;
     }
 
+    temp() {
+      return this.temperature;
+    }
+
     down(number) {
       if((this.temperature - number) < this.MINIMUM_TEMP) {
         throw new Error('This is too low bro!')
