@@ -8,7 +8,7 @@ class Thermostat {
       this.MINIMUM_TEMP = 10;
     }
 
-    up(number) {
+    up(number = 1) {
       if((this.temperature + number) > this.MAXIMUM_TEMP) {
         throw new Error(`Save the planet, max temp of ${this.MAXIMUM_TEMP}`);
 
@@ -20,7 +20,7 @@ class Thermostat {
       return this.temperature;
     }
 
-    down(number) {
+    down(number = 1) {
       if((this.temperature - number) < this.MINIMUM_TEMP) {
         throw new Error('This is too low bro!')
 
