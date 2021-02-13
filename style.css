@@ -1,3 +1,30 @@
+/* .container {
+  position: relative;
+} */
+
+.nav {
+  font-family: 'Dosis', sans-serif;
+  font-size: 60;
+  float: left;
+  width: 200px;
+}
+
+.buttons {
+  /* position is static by default */
+  margin-left: 50px;
+}
+
+.current-tempy {
+  margin-left: 200px;
+}
+
+.tempy {
+
+}
+.psm {
+  margin-left: 50px;
+}
+
 .low-usage {
   color: green;
 }

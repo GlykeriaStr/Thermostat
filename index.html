@@ -7,17 +7,23 @@
   <body>
      <script src="jquery.js"></script>
     <section>
-      <h1 id='temperature'></h1>
-      <p>
+      <!-- <h1 class ='container'>Temperature</h1> -->
+      <h1 class ='nav' id='temperature'></h1>
+      <p class = 'buttons'>
         <button id='temperature-up'>+</button>
         <button id='temperature-down'>-</button>
         <button id='temperature-reset'>Reset</button>
         <br>
+      </p>
+      <p class = 'psm'>
         Power saving mode is <span id='status'>on</span>
+        <br>
         <button id='psm-on'>On</button>
         <button id='psm-off'>Off</button>
+      </p>
         <section>
-          <h1>Current temperature is: <span id='current-temp'></span></h1>
+          <!-- <h1 class ='current-tempy'>Current temperature is: </h1> -->
+          <h1><span class ='tempy' id='current-temp'></span>20</h1>
           <form id='select-city'>
             <input id='current-city' type="text" placeholder="Enter a city">
             <input type="submit" value="Submit">
